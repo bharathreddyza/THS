@@ -1,0 +1,30 @@
+compiled language -> in this  the machine directly translates the code
+
+interpreted language -> in this language their is a intepretor whose job is to transfer the language to another readable form 
+synchhronised langages --> ruby , java etc
+
+these are languages which create multiple threads for each job and cannot do multi tasking 
+asynchronised languages --> ex node.js 
+these languages create a single thread and do multi tasking 
+
+echmascript --> a body created to maintain the standards of web browsers
+
+critical rendering path 
+  -->  server seide rendering 
+        A HTTP RESPONSE with  html css and js files are sent to the client in response to the http protocol 
+        this SSR is fast in initial rendering but intractivity therafter becomes slow because of repeted responses
+       this was done before react came into lime light 
+       server --> html css and js --> html --> css --> js --> layout --> js --> render 
+ -->  client side rendering 
+      a single javascript file is sent to the client and because of which initial rendering is slow but interactivity after that becomes fast
+      server --> js(with html and css)  --> client --> layout of css html is created --> rendered 
+  
+
+
+-------------------httpstatuscode--------------------       
+200 --> ok
+404 --> not found
+500--> server down 
+402 --> bad request 
+403--> forbidden /unauthorised 
+
