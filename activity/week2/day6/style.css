@@ -1,0 +1,18 @@
+p + h1{
+    color: chocolate;
+}
+.nameclaa {
+    color: yellow;
+
+}
+p  h1  em {
+    color: cornflowerblue;
+}
+span:first-child{
+    color: p;
+}
+
+
+p  + span {
+    color: palevioletred;
+}

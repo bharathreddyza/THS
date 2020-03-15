@@ -1,0 +1,444 @@
+SECTION 1
+1.
+Expand Bash.
+Bourne against shell
+2.
+Explain all types of Shell Expansion.
+In a shell shell command is broken down into different bits called tokens which is a sequence of one or more characters 
+Now after these tokens are  broken down they must be expanded, there are 8 ways how these tokens are resolved and these are called shell expansions
+Brace expantion → this is when a strings are generated using braces and comma  for ex → st{ac,fv,efe,}
+Tilda expansion → if the expressiom starts with ~  it is called tild expression 
+            ~ followed by any expression until an unqouted / is called tilda prefix
+Shell variable and parameter expansion → the dollar symbol followed by braces 
+${parameter} 
+Command substitution → using ` `  we can replace comand with the output of the command 
+Arthematic expression → $((expression ))
+          → arthematic expression can be used for arthematic evaluation 
+Process substitution → >( LIST) 
+Word spiltting → deals with how spacess tab and null are expanded 
+File name expansion → same as word spiltting 
+
+
+3.what is the usage of the man command?
+Man command displays the manual of the comnand given after typing man 
+For ex ‘man pwd’ will give the manual with all the details about pwd command 
+
+4.Write a command to display the current working directory.
+‘Pwd’
+
+
+5.Write a command to change the directory path to a certain directory.
+‘Cd’ is the command used to change the directory path to a certain directory 
+For ex → cd  desktop will take us to desktop if we are in the parent directory of desktop
+
+
+6.Write a command to get into the home directory.
+Just “Cd” will take us to the home directory  
+
+7.Write a command to get into the parent directory.
+“Cd ..” is a command used to go back one step or to the parent directory of the present file or folder 
+→ to go back even further to parents parent directory we have to use “cd ../..” and “cd ../../..” and so on 
+ 
+8.Write a command to go to the previous directory.
+Cd ..
+
+9.Define the absolute path.
+Absolute path is a complete path of the file whose location is traced entirely from the root directory 
+For ex → if we want to go c which is in b which is in a 
+The absolute path would be “ cd a/b/c “
+10.Define the relative path.
+Relative path is relative to the present directory 
+For ex → if we are in b and want to go to c 
+               “Cd c”
+There is / before the directory which we want to go 
+
+
+
+11.Write command to make a directory.
+Mkdir
+
+
+12.Write command to remove a directory.
+Rmdir
+
+
+13.Write command to remove the empty directory.
+Rmdir or rm 
+Rmdir is a command used to delete especially empty directory’s 
+
+
+14.Write a command to remove all the files and sub-directories present in the directory.
+“ rm ” is the command used to remove directorys but for an non-empty directory rm will show an error “cannot remove directory”
+For this comman “   rm -r ”  is used which stands for recursive which removes directorys and its sub content recursively 
+
+
+15.Write the usage of the pushd command.
+Pushd command i used to push the current directory into the specified stack 
+
+
+16.Write the usage of the popd command.
+Popd command is used to return back the directory before the current directory
+
+
+17.Write a command to list all the files in the current directory
+Ls
+
+
+18.Write command to know the type of any given file.
+file 
+
+
+19.Write about the magic file in the Unix file system.
+Magic files can be acessed with command file -C -m filename
+A magic file identifies the type of data
+
+
+20.Write the usage of file command for the special files as a parameter.
+File -s (special files) → file reads and determines the type of argument 
+But file -s reads arguments which are block and character levels
+
+
+
+21.Write a command to create the file.
+Touch 
+
+
+22.Write a command to copy the file without a change in timestamps.
+Touch -r originalfile newfile 
+This commad doesn’t change the timestamp
+
+
+
+23.Write a command to modify the access time of a file.
+Touch -a
+
+24.list all the options available for the touch command.
+Touch -a modify the access time of the file 
+Touch -r copy a file without changing the timestamp
+
+25.Write command to remove a file from a directory.
+Rm
+
+26.Write about 'rm -i' command.
+“Rm -i” command is used when we want to confirm if we want to delete or not , it asks us for Y or N before deleting 
+
+
+27.Write a command to copy the file.
+cp 
+
+
+28.Define about the recursive copy.
+Cp command is used to copy files from one location to another
+But it wont work if the directory is not empty 
+Cp -r copys all the subsiadary files of the directory also
+
+29.Write about the usage of head command.
+Head command can be used to display the first 10 lines of the file
+
+30.Write about the usage of the tail command.
+Tail command is used to display the last ten lines of a file 
+
+31.Write a command to view the file content.
+Cat  → concatenate displays the content of the file
+
+32.Write the usage of cat command to copy the file.
+Cat command can be used to copy content from file to another 
+Cat file1 > file2 will copy content from file1 to file2 
+
+
+
+33.Write the usage of cat command to create the file
+Cat followed by a filename creates a file if the file already doesnt exist 
+If it exist it displays the content of the file 
+
+
+
+
+34.Write command to concatenate the file contents.
+cat 
+
+
+35.Write a command to copy files using mv command
+Mv --backup
+
+
+36.Write command to move the files.
+Mv → commmand is used to rename or move files between directories 
+It requires 2 things the source and destination path
+ Mv filename /desktop
+
+
+
+37.Write the usage of tac command.
+Tac command is similar to cat command but tac displays the information in reverse order the last line is shown first 
+
+38.Write briefly about the chmod command.
+Chmod is used to set the permission of the user group or others 
+For ex → “chmod u -r “ will remove read permission from the user
+
+
+
+39.Write a command to change the mode a file as universal Writable/readable.
+ Chmod a = wr
+
+
+40.Write a command to change the file as executable/Writable/readable.
+Chmod a = rwx
+
+41.Write all the file permissions possible.
+Read write execute 
+
+42.Write about umask command.
+Default values of directories and files is set at 777 and 666 respectively 
+Umask command is used to remove permissions from the files 
+If we want the directory read  permission only for the user we use umask 077 which will remove all permissions for groups and others
+
+
+
+43.Write the usage of 'chown' command.
+Chown command is used to change the ownerership
+   Chown newowner abc.txt 
+Will give newowner the wnership of the file abc.txt
+
+44.Write a command to make the files and directories to have all permissions to you and only readable to others
+Chmod u =rwx ,o =r
+
+
+45.Write a command to print output in stdout and in file.
+-Stdin stdout and stderr are types types of data streaming 
+Stdin is used my the commandline to take input 
+And stdout and stderr is used to display out but stderr is used when there is an error 
+Echo is the command used to print output  
+
+46.Write about the grep command.
+Grep command is used to search for patterns in a file  
+It does what word search does in ms-word 
+Grep -i “BBH” would give  all BHH in the file 
+
+47.Write a command to print the top and bottom n lines
+Head and tail
+
+48.Write briefly about the' tr' command
+Tr which stands for translate it is a command used to modify content from uppercase to lowercase or add or remove spaces 
+ cat hhh | tr "[a-z]" "[A-Z] → this command will make the output all uppercase
+
+49.Write a command to print word count in a given file.
+Wc -w is the command which prints the number of lines 
+
+50.explain sort command usage to sort the file numeric wise.
+Sort -n is used to sort lines of text based on numerical value 
+
+
+51.Write about the sed command briefly.
+Sed is used to text transformation and is used like a text editor 
+It is used to find or  replace text etc 
+
+
+
+52.sort the file contents using PIPE
+Cat hhh | sort 
+
+
+53.Write command to display the IP address of the host
+Ip addr show 
+
+54.Write about IP command.
+Ip command is used to configure network interfaces 
+It is used to display and modify network interfaces and display and modify ip adresses
+                    
+ 55.create an alias to display your city name.
+First we have to set a alias in command line 
+alias  currentcity = “hyderabad”
+Now currentcity would give hyderabad
+
+56.explain about 'which' command
+Which command tells us the pathnames of files or directory’s
+Which -a 
+
+57.Write a command to display the exit code of the previous command.
+
+58.execute the pwd command twice using a single command.
+Cd file1 ;pwd | cd file2 ;pwd
+
+
+59.Execute a command to sleep your system for 10 seconds.
+Sleep 10 → this command is used to creat a dummy job 
+
+
+60.Write about the environmental variables.
+Environmental variables are a list of variables with names and associated values 
+These varibles are available system wide and are inherited by all child processes 
+Common environmental variables → user home 
+
+61.Write a command to display all the environmental variables in the system
+To list all environmental variable we have to use the commmand “ printenv”
+
+62.Export a Myvar shell variable using export command.
+
+63.Write a command to display all the files ending with .txt
+64.Write about the file globbing.
+File globbing is way to represent multiple filenames by using special characters called wildcards 
+  → * 
+  → ?    
+  → /
+
+65.Interpret the command 'echo *'.
+The shell inteprets Echo *  and returns all the files in the current directory 
+Echo is similar to cat which just prints the content of the folder
+
+
+
+66.Exhibit the command 'ls [a-z]*.txt'.
+
+67.Write a command to display the file which has alphabets in octal order.
+Od is a command which converts alphabets into octal values 
+
+68.Write a command to display all removed duplicate columns in a file.
+
+69.Write the usage of a find command.
+Find command searches for all the files and folders inside the current directory 
+
+70.Write the utility usage of date.
+Date command can be used to print the current date or format or assigh date to any program 
+
+71.Compress the file a.txt using the gzip command.
+Steps 
+→ go to Desktop 
+→ create a file using touch a.txt
+→ use “ gzip a.txt “ command 
+→ a.txt is now a zip file 
+
+
+72.Write a command to unzip the file using gunzip.
+Gunzip a.txt will unzip a.txt
+
+73.Explain briefly about catzip command.
+zip cat or zcat uncompresses the compressed files and writes down the uncompressed data 
+
+74.Write about bzip,bunzip,bzcat commands.
+Bzip → similar to gzip bzip command is used to compress  files into one single file 
+Bunzip → bunzip decompresses the files compresse by bzip and detects and ignores the files not created by bzip 
+
+
+75.explain the difference between bzip and gzip commands.
+Bzip is a open sorce data compression algorithm it can recontruct the original data of the compressed file ,it uses less than 9 layers of compression techniques 
+
+Gzip is similar in funtionality to bzip but it has a 10 byte header and a 8 byte footer 
+
+
+76.Write about the 'w' command.
+W command gives us details of who is logged in and what they are doing in the shell
+
+77.Write about who command.
+Who command shows us which user is logged in but unlike w command it doesnt give a detailed list of time number of users etc
+
+78.Write about the id command.
+Id commands print the userid or groupid 
+
+79.Write about the Sudo command.
+Sudo command is used to go to the administrator to do high level function 
+
+
+80.Write about the /etc/passwd file.
+/etc/passwd contains all basic information about all the users in the computer 
+Each line in it represents a single user 
+
+81.Write a command to create a user.
+Useradd space newusername creates a new user 
+Ex → useradd haha willcreate a new user in the system 
+For this we have to use su command and go into the root directory 
+
+82.Write a command to delete the user 'user5'
+Userdel 
+Userdel haha will delete the user haha 
+
+83.change the user description using usermod command.
+Usermod is the command used to change any attributes of an already created user 
+Usermod “new description” oldone 
+
+84.Write briefly about the /etc/skel command.
+/etc/skel are files which are auotmatically added to into a user acccont when a new user is created 
+
+85.Write a command to change the shell of a prescribed user.
+Chsh → change shell is a command used to change the shell of the logged in user 
+
+86.Write a command to change your shell to the Korn shell.
+Type chsh 
+Enter your passwrord 
+Type the new shell as korn shel
+87.Write a command passwd command
+Passwd command is used to change the password of the linuk user 
+
+88.what is the use of /etc/passwd file.
+/etc/passwd contains user information and password and other user group and others related information required durin login 
+
+89.create a user using a command useradd with OpenSSL function
+Go to root directory 
+Useradd openssl passwd “” username 
+90.
+Write briefly about the /etc/login.defs
+ /etc/login.defs provides password ,userid groupid  related configuration 
+
+
+__________________________________________
+SECTION 2
+
+
+1)Setup a  cron job which creates a new text file every 20 seconds.
+Note :  a) The Text File Name should be the system TIME while executing.
+b)The Text File Content should be the system DATE.
+
+Command to set a cronjob everys 20 seconds is 
+
+               → * * * * *  sleep 20;
+Command to set the text file the system time 
+          → Touch  “$time”.txt >> folder
+Command to set the content of the file to be system date 
+  
+
+
+Create a file in directory and do nano to go inside the file
+Go inside 
+
+
+2)
+Setup a python HTTP Server which will run in the background.
+Note : a) Python Server should run on port 80
+          b) All the server access logs should be captured in a log.txt file
+          c) Demonstrate how to terminate the above background process
+
+
+→ Python -m SimpleHTTPServer portnumber  this commad to create a                       port 
+→ pushd  /var/log; python -m SimpleHTTPServer 80; popd 
+→ use bg command to see whats running in the background
+→ use command kill %num to terminate the backgorund process
+
+
+                    
+    3)Explain the difference between file soft links and hard links by creating one.
+Demonstrate with an example file.
+   →   Links are pointer to a file or directory
+  → hard links are reffered to the source 
+  → hard links have the content as well
+  →  soft links contain the path of the orginal file and not the content 
+→ hard links cannot link to a directory but soft links can be linked to a directory 
+  Ln -s file1 file2    →  soft links 
+  Ln -l file1 file 2      → hard link
+
+
+
+
+    4)Explain how binary system is being used with chmod command.
+
+Chmod is a commad used to change permission in linux 
+Binary numbers 1 and 0 are used as on and off to give or remove a permission 
+111 will give read write and execute 
+100 will only give read permission 
+111 110 100 will give read write execute permission to user read and write permission to group and read permission to others 
+
+
+
+   5)    What is a Zombie Process. Demonstrate usage of htop, finding zombie
+      Zombie processes are processs which keep running without stopping 
+        Htop lost all such processes and using the pid we can kill the process 
+
