@@ -2,7 +2,7 @@
 var evenOdd = [12, 43, 4, 45, 45];
 for(var i=0; i<evenAndOdd.legnth; i++){
     var a;
-    switch(evenAndOdd){
+    i{
         case evenAndOdd(i) % 2 === 0:
        console.log(evenAndOdd + " is even");
         case  evenAndOdd(i) % 2 !== 0:
