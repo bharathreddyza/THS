@@ -189,3 +189,49 @@ function isPalindrome(str) {
 
 console.log(isPalindrome('amanaplanacanalpanama')); // true
 console.log(isPalindrome('amanaplanacanalpandemonium')); // false
+
+
+//What does the following recursive algorithm do?
+ //Analyse outputs for multipleinputs and find out what the below algorithm is solution for.function
+       
+    function fun(n){
+            if (n == 0 || n == 1) 
+                   return n;
+            if (n%3 != 0)     
+               return 0;  
+                 return fun(n/3);}   
+    // this function gives out 0 for all numbers which 3 is a sqaure root of 
+
+
+
+    function f( n){ 
+           if(n <= 1)
+                   return 1; 
+                      if(n%2 == 0)
+                              return f(n/2);
+                                  return f(n/2) + f(n/2+1);}
+f(11));  //13930
+
+
+
+
+function foo(n, r){
+    if(n >0) return (n%r + foo (n/r, r) );
+    else return 0;
+
+}
+foo(513,2)
+///4
+
+
+function robot(n,a,b){ 
+      if (n <= 0)  return; 
+        robot(n-1, a, b+n); 
+          console.log(n,a,b);
+             robot(n-1, b, a+n);}
+             
+robot(9,5,2)
+  
+
+
+
