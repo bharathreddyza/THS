@@ -1,0 +1,15 @@
+{
+  "name": "algos",
+  "version": "1.0.0",
+  "description": "practice",
+  "main": "algos.js",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
