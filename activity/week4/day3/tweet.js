@@ -33,16 +33,31 @@ function newTweet(event){
 function removetweet(e){   
        if(e.target.classList.contains('x')){
            e.target.parentElement.remove();
-           localStorage.removeItem(e.target.parentElement)
+        //    localStorage.removeItem(e.target.parentElement)
 
 
-       }    
+       }        removeTweetFromLocal(e.target.parentElement.textContent)
 
 }
 
 //to remove tweet from local storage 
 function removeTweetFromLocal(){
-}
+  // get the existing tweets from storage
+  const tweet = getTweetsFromStorage();
+  console.log(tweet.substring(0, tweet.length -1)   )  
+//   )
+// console.log(tweet)
+  const removetweet = tweet.substring(0, tweet.length-1)
+  
+  //loop through the tweets and remove the tweet that is equqal
+tweet.forEach(function(tweet, index){
+     if(removetweet === tweet){
+         tweet.splice(index,1)
+     }
+})
+//set the tweets after deleting 
+localStorage.setItem('tweet', JSON.stringify(tweet))
+}       
 
 
 function getTweetsToLocalStorage(tweet){
