@@ -232,12 +232,18 @@ function disemvowel(string) {
 // **************************************/////////
 function arrayBuilder(obj) {
     // your code here...
+    var arr = []
 
     for (key  in obj) {
-        console.log(`${key}: ${obj[key]}`);
-      }
+      
+        for(i=0 ;i <= obj[key]  ; i++){
+            arr.push(key)
+        }
+      }  
+      
+                
 
-  
+          return arr
   }
   
   //Comment in the code below to test your function:

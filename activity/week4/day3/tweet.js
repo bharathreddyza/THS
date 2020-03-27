@@ -41,22 +41,22 @@ function removetweet(e){
 }
 
 //to remove tweet from local storage 
-function removeTweetFromLocal(){
+function removeTweetFromLocal(tweet){
   // get the existing tweets from storage
-  const tweet = getTweetsFromStorage();
-  console.log(tweet.substring(0, tweet.length -1)   )  
+  const tweets = getTweetsFromStorage();
+//   console.log(tweets.substring(0, tweet.length-1)   )  
 //   )
 // console.log(tweet)
-  const removetweet = tweet.substring(0, tweet.length-1)
+  const removetweet = tweets.substring(0, tweet.length-1)
   
   //loop through the tweets and remove the tweet that is equqal
-tweet.forEach(function(tweet, index){
+tweets.forEach(function(tweet, index){
      if(removetweet === tweet){
-         tweet.splice(index,1)
+         tweets.splice(index,1)
      }
 })
 //set the tweets after deleting 
-localStorage.setItem('tweet', JSON.stringify(tweet))
+localStorage.setItem('tweets', JSON.stringify(tweet))
 }       
 
 
