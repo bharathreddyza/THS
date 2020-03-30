@@ -1,16 +1,11 @@
-
-
-// 3)Write a program to decide given N is Prime or not.
-var readlineSync = require('readline-sync')
- 
-function checkforprime(n){
-    var con = 2;
-    if(n% con !== 0){
-        con++;
-     return   checkforprime(n)
-    }else if(n% con ===0){
-        console.log(n +' is divisible by' + con)
-    }
+var readlinesync = require('readline-sync');
+readlinesync = readlinesync.question('give a number')
+input()
+function input(){
+if (Number(readlinesync% 2 == 0)) { console.log(readlinesync + " is an even number"); 
+} else if(Number(readlinesync % 2 !== 0)){ console.log(readlinesync + " is an odd number");
+} else{
+    console.log('that doesnt look like a number');
+    input();
 }
-
-checkforprime(readlineSync.question("enter any number: "))
+}

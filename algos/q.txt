@@ -1,0 +1,30 @@
+1)Write a program to given input Check whether  Even or odd.
+2)Write a program to Generate Even and Odd Number less than N and Generate ‘N’ Even and OddNumbers.
+3)Write a program to decide given N is Prime or not.
+4)Write a program to subtract two integers without using Minus (-) operator
+5)Write a program to find remainder of two numbers without using modulus (%) operator
+6)Write a program to generate Prime  Numbers less than N and Generate ‘N’ Prime Numbers/in givenrange.
+7)Write a program that prints the numbers from 1 to 100 and for multiples of '3' print "Fizz" instead ofthe number and for the multiples of'5' print "Buzz".https://www.geeksforgeeks.org/fizz-buzz-implementation/
+8)Write a program to find GCD (Greatest Common Divisor) or HCF (Highest Common Factor) of twonumbers is the largest number that divides both of them using recursion.
+9)Write a program  find GCD of the array elements given an array of numbers,
+10)Write a program given an array of ‘N’ numbers, find LCM of it.
+11)Write a program to find the Sum of Array Elements.
+12)Write a  program for swapping of two arrays
+13)Write a program to find the maximum number in an array using function
+14)Write a program to find Median of the given Array?
+15)Write a program to find the highest and the lowest number in array
+16)Write a program  to find Mean of given Array Elements?
+17)Write a program to find whethe rgiven numbe ris an Armstrong number or not?**(Narcissisticnumber or Pluperfect digital invariant (PPDI) or a Plus perfect number)
+18)Write a program to find whether given number is an Perfect number or not
+19) Write a program to check whether given character is vowel or consonant
+20) Write a program to find the largest number among three numbers
+21) Write a program to find the roots of a quadratic equation
+22) Write a program to Check Whether the given year is a leap year or not
+3) Write a program to check whether a number is a positive number or negative number?
+24) Write a program to Program to calculate the Combinations and Permutations!Combination means way of selecting a things or particular item into  group or sets.nCr=n!/r!(n-r)!​.Permutationsmeanspossiblewayofrearranginginthegrouporsetintheparticularorder.nPr=n!/(n-r)!
+25)Write a program to find power of a number using recursion
+26)Write a program check whether given character is an alphabet or not
+27)Writeaprogramtoclassifythetriangleasequilateral,isoscelesandscalenetothegivensidesoftriangle.(HINT: Solve using semi-perimeter and area)
+28)Write a program to find area and circumference of circle
+29)Write a program to remove duplicate element in an array
+30)Write a program to check if the given string is palindrome or not

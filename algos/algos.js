@@ -93,42 +93,21 @@ var arr2 = [3,6,8,24,65];
 function swap(item1,item2){
 
   for(var i =0;i < arr1.length ; i++){
-    arr1[i] = arr2[i]
+   let arr1 = []
+   var arr1[i] = arr2[i]
+    // console.log(arr1[i])
   }
   
   for(var j = 0 ;j<arr2.length; j++ ){
-    arr2[j] = arr1[j]
-  }
+   var arr2[i] = arr1[j]
+  } console.log( arr2, arr1)
 }  ////not working 
+swap(arr1,arr2)
 
 
-//13)Write a program to find the maximum number in an array using function
-var arr1 = [1,2,5,46,74];
-var max = arr.reduce(function(a, b) {
-  return Math.max(a, b);
-});
-max --> 74
 
 
-//14)Write a program to find Median of the given Array?
-var arr1 = [1,85,50,46,74];
-var a;
-   arr1.sort;
-   for(var i =0;i<arr1.length;i++){
-      a =(arr1.length +1)/2
-  
-    }
 
-
-  //  15)Write a program to find the highest and the lowest number in array
-    var arr1 = [23,56,78,42,5,80];
-    var max = arr1.reduce(function(a,b){
-      return Math.max(a, b);
-    })
-
-    var min = arr1.reduce(function(a, b){
-      return Math.min(a, b);
-    })
 
 // 19)  Write a program to check whether given character is vowel or consonant
 var give = prompt("give a letter");
