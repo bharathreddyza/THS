@@ -21,3 +21,4 @@ let gcdArr = function(arr) {
 }
 
 console.log(gcdArr(arr))
+
