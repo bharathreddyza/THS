@@ -1,9 +1,11 @@
 //Create an object adminFunctionStore that has access to all methods in the userFunctionStore object, without copying them over individually.
 
-const userFunctionStore = {
-    sayType: function() {
+class UserFunctionStore {
+  constructor(name){
+    sayType = function() {
       console.log("I am a " + this.type);
     }
+  }
   }
   
   function userFactory(name, score) {
@@ -14,13 +16,25 @@ const userFunctionStore = {
     return user;
   }
 
-  const AdminFunctionStore = {
-       getaccess :function(){ 
-          Object.create(userFunctionStore)
-      } 
-  }
+  class AdminFunctionStore extends UserFunctionStore {
+    constructor(name){
+    super(name)
+    }
+    }
 
 
+    var adminFactory = class adminFactory extends AdminFunctionStore {
+      constructor(){
+
+      this.call(userFactory)
+      this.type = 'admin'
+
+      }
+    }
+    
+    adminFactory.sharePublicMessage = function(){
+      console.log('welcome users!')
+    }
 
 //Create an adminFactory function that creates an object with all the same data fields (and default values) as objects of the userFactory class, but without copying each data field individually.
 

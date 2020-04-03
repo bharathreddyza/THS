@@ -4,7 +4,7 @@ function getStudentRecord(recordId){
         })
     }
     function printRecords(recordIds) {
-        // TODO
+        //  
        
         const records =recordIds.map(getStudentRecord)
         records.sort(function(a,b){
