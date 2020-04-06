@@ -10,3 +10,4 @@ const server = http.createServer(function(Request,Response){
     Response.end(JSON.stringify({ first:  "hi how are you", secong: " after fisrt"}))
 })
 server.listen(port,()=> console.log(`server is listeing at ${port}`))
+
