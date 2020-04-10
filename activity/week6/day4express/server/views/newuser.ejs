@@ -1,0 +1,22 @@
+<%- include('./partials/header'); -%>
+  <div class="row">
+<div class="card col-4" style="width: 18rem;">
+    <img class="card-img-top" src="<%= data[0].avatar_url %>" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title"><%= data[0].login %></h5>
+      <h5 class="card-title"><%= data[0].organisations_url%></h5>
+      <h5 class="card-title"><%= data[0].events_url %></h5>
+      <h5 class="card-title"><%= data[0].gravatar_id %></h5>
+      <h5 class="card-title"><%= data[0].type %></h5>
+      <h5 class="card-title"><%= data[0].site_admin %></h5>
+
+      <p class="card-text"> <h5>repos</h5> <%= data[0].repos_url %></p>
+      <a href="<%= data[0].url %>" class="btn btn-primary">check profile</a>
+    </div>
+  </div>
+</div>
+
+
+
+
+<%- include('./partials/footer') -%>

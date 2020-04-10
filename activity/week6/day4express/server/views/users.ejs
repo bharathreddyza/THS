@@ -1,12 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/server/public/style.css">
-</head>
-<body>
-    <h1>hello</h1>
-</body>
-</html>
+<%- include('./partials/header'); -%>
+
+
+<h1>welcome to the users page </h1>
+<div class="row" >
+<% for(let i=0; i<data.length; i++) { %>
+    <!-- <li><%= data[i].login %></li> -->
+        
+        <div class="card col-md-4" style="width: 18rem;">
+            <img class="card-img-top" src="<%= data[i].avatar_url %>" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title"><%= data[i].login %></h5>
+              <p class="card-text"> <h5>repos</h5> <%= data[i].repos_url %></p>
+              <a href=" /users/<%= data[i].login  %>" class="btn btn-primary">check profile</a>
+            </div>
+          </div>
+
+
+<%} %>
+</div>
+
+<%- include('./partials/footer') -%>
+
+
