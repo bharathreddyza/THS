@@ -16,8 +16,8 @@ router.get('/',(req,res)=>{
 // http method - get 
 // response ---> text 
   
-router.get('/new(req,res)=>{
-    res.send("a new product is going to launch ")
-})
+router.get('/newproduct',(req,res)=>{
+    res.render('newproduct', "a new product is going to launch ")
+}) 
  
 module.exports = router

@@ -3,15 +3,15 @@
 <h1>welcome to product page </h1>
 
 <div class="row" >
-    <% for(let i=0; i<data.length; i++) { %>
-        <!-- <li><%= data[i].login %></li> -->
+    <% for(let i=0; i<products.length; i++) { %>
             
             <div class="card col-md-4" style="width: 18rem;">
-                <img class="card-img-top" src="<%= %>" alt="Card image cap">
+                <img class="card-img-top" src="<%= products[i].imageurl %>" alt="Card image cap">
                 <div class="card-body">
-                  <h5 class="card-title"><%= data[i].login %></h5>
-                  <p class="card-text"> <h5>repos</h5> <%= data[i].repos_url %></p>
-                  <a href=" /users/<%= data[i].login  %>" class="btn btn-primary">check profile</a>
+                  <h5 class="card-title"><%=  products[i].productname %></h5>
+                  <p class="card-text"> <h5>repos</h5> <%=  products[i].vote %></p>
+
+                  <a href=" <%= %>" class="btn btn-primary">check profile</a>
                 </div>
               </div>
     
@@ -19,3 +19,4 @@
     <%} %>
     </div>
 <%- include('./partials/footer') ; -%>
+ 

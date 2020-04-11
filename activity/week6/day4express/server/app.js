@@ -31,6 +31,7 @@ app.use('about',indexroute)
 app.use('friends' , indexroute)
 app.use('contact' , indexroute)
 
+app.listen(port,()=>console.log( `port is ruuning at port ${port}`))
 
 
 
@@ -79,7 +80,6 @@ app.use('contact' , indexroute)
 
 
 //run server 
-app.listen(port,()=>console.log( `port is ruuning at port ${port}`))
 
 
 
