@@ -10,7 +10,8 @@ app.set('view engine', 'ejs')
 
 //serve static assets 
 //app.use is the middlware
-app.use('/public' ,express.static(path.join(__dirname, 'public')))
+// app.use('/public' ,express.static(path.join(__dirname, 'public')))
+app.use(express.static(__dirname + '/public'));
 
 
 
