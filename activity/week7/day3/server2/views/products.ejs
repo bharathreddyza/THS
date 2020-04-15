@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>products</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body>
+    
+    <% for(var i = 0 ; i < data.length ; i++){ %>
+    
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h1 class="card-title"><%= data[i].name %></h1>
+          <h2 class="card-subtitle mb-2 text-muted"> category: <%= data[i].category %></h2>
+          <p class="card-text">user review : <%= data[i].desc %></p>
+           <p><span>price: <%= data[i].price %></span></p>
+        </div>
+      </div>
+<% } %>
+
+
+</body>
+</html>

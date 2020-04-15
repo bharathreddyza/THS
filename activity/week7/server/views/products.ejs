@@ -1,0 +1,10 @@
+<h2>add new products</h2>
+<form action="/products" method="POST">
+<input type="text" name="product">
+<button type="submit">submit</button>
+</form>
+
+<% for(var i = 0 ; i< data.length;i++){%>
+    <li> <%= data[i] %></li>
+
+    <% }%>
