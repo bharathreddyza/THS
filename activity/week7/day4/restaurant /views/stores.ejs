@@ -6,12 +6,12 @@
     <div class="card shadow p-3 mb-5 bg-white rounded ">
         <div class="card-body">
             <div class="card" style="width: 18rem;">
-                <img src="<%=data[i].image%>" class="card-img-top" alt="Resturants">
+                <img src="<%=data[i].storeImage %>" class="card-img-top" alt="Resturants">
                 <div class="card-body">
-                <h4><%= data[i].name %></h4>
-                  <p class="card-text"><%= data[i].description %></p>
+                <h4><%= data[i].storeName %></h4>
+                  <p class="card-text"><%= data[i].desc %></p>
                  <center>
-                     <a href="/restaurants/<%= data[i]._id %>" class="btn btn-outline-success my-2 my-sm-0" type="submit">View More</a>
+                     <a href="/stores/<%= data[i]._id%>" class="btn btn-outline-success my-2 my-sm-0" type="submit">View More</a>
                     </center> 
                 </div>
               </div>

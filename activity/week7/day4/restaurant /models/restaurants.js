@@ -2,13 +2,11 @@ const mongoose = require('mongoose');
 
 const restaurantsSchema = new mongoose.Schema({
     restaurantName: String,
-    email:{
-        type:String,
-        required:['email is compulsory'],
-
-    },
+    email:String,
     phoneNumber: Number,
-
+      desc:String,
+      price:Number,
+      image:String
     })
 
     const Restaurants = mongoose.model('restaurants' ,restaurantsSchema);

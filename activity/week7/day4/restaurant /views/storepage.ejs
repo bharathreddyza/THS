@@ -1,0 +1,21 @@
+<%- include('./partials/header'); -%>
+<div class="container">
+    <div class="col-sm-3">
+    <div class="card shadow p-3 mb-5 bg-white rounded ">
+        <div class="card-body">
+            <div class="card" style="width: 18rem;">
+                <img src="<%= data.storeImage %>" class="card-img-top" alt="Resturants">
+                <div class="card-body">
+                <h4><%= data.storeName %></h4>
+                <h3> <%= data.storeContact %></h3>
+                <p><%= data.storeAddr %></p>
+                  <p class="card-text"><%= data.desc %></p>
+                
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<%- include('./partials/footer'); -%> 

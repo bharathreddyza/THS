@@ -1,0 +1,22 @@
+<%- include('./partials/header'); -%>
+<div class="container">
+    <%= console.log(data) %>
+    <div class="col-sm-3">
+    <div class="card shadow p-3 mb-5 bg-white rounded ">
+        <div class="card-body">
+            <div class="card" style="width: 18rem">
+                <img src="<%= data.image %>" class="card-img-top" alt="Resturants">
+                <div class="card-body">
+                <h4><%= data.restaurantName %></h4>
+                <h3> <%= data.phoneNumber %></h3>
+                <p><%= data.price  %>Rs</p>
+                  <p class="card-text"><%= data.desc %></p>
+                
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<%- include('./partials/footer'); -%> 
