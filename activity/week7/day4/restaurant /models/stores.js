@@ -8,7 +8,7 @@ const storeSchema = new mongoose.Schema({
     },
     storeContact : {
         type: Number,
-        required:["pleae enter your store umber"]
+        required:["pleae enter your store number"]
     },
     storeImage : {
         type: String,

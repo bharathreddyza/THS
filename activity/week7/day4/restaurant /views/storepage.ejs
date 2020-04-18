@@ -1,21 +1,67 @@
 <%- include('./partials/header'); -%>
 <div class="container">
+  <form method="POST"  action="/stores/<%= data._id%>?_method=PUT">
     <div class="col-sm-3">
     <div class="card shadow p-3 mb-5 bg-white rounded ">
         <div class="card-body">
             <div class="card" style="width: 18rem;">
-                <img src="<%= data.storeImage %>" class="card-img-top" alt="Resturants">
+                <img src="<%= data.storeImage %>"  class="card-img-top" alt="Resturants">
                 <div class="card-body">
                 <h4><%= data.storeName %></h4>
                 <h3> <%= data.storeContact %></h3>
                 <p><%= data.storeAddr %></p>
                   <p class="card-text"><%= data.desc %></p>
-                
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">update</button>
+
+                  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="storeName">update <%= data.storeName %></h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <form>
+                            <div class="form-group">
+                              <label for="recipient-name" class="col-form-label">storeName:</label>
+                              <input type="text" class="form-control" name="storeName" value="<%= data.storeName %>" id="recipient-name">
+                            </div>
+                            <div class="form-group">
+                              <label for="message-text" class="col-form-label">storeContact:</label>
+                              <input class="form-control" name="storeContact" value="<%= data.storeContact %>" id="message-text"></input>
+                            </div>
+                            <div class="form-group">
+                              <label for="message-text" class="col-form-label">storeImage:</label>
+                              <input class="form-control" name="storeImage" value="<%= data.storeImage %>" id="message-text"></textarea>
+                            </div>
+                            <div class="form-group">
+                              <label for="message-text" class="col-form-label">storeAddr:</label>
+                              <input class="form-control" name="storeAddr" value="<%= data.storeAddr %>" id="message-text"></textarea>
+                            </div>
+                            <div class="form-group">
+                              <label for="message-text" class="col-form-label">storeDesc:</label>
+                              <input class="form-control" name="storeDesc" value="<%= data.storeDesc %>" id="message-text"></textarea>
+                            </div>
+                            <div class="form-group">
+                              <label for="message-text" class="col-form-label">storecity:</label>
+                              <input class="form-control" name="storecity" value="<%= data.storecity %>" id="message-text"></>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Send message</button>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
         </div>
     </div>
 </div>
+</form>
 </div>
 
 <%- include('./partials/footer'); -%> 

@@ -42,8 +42,9 @@ router.get('/:id', (req,res)=> {
 /// mongoose mth - findOneAndUpdate 
 router.put('/:id', (req,res)=>{
     const id = req.params.id
+    console.log(req.body)
     db.STORES.findOneAndUpdate({_id: id} ,req.body)
-    .then((data)=> res.json(data))
+    .then((data)=> res.redirect('/stores'))
     .catch((err)=> res.send(err))
 });
 

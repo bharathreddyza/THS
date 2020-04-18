@@ -11,7 +11,7 @@ router.get('/',(req,res)=>{
 
 router.post('/',(req,res)=>{
     db.Restaurants.create(req.body)
-    .then((data)=> res.redirect('/restaurants',{data:data}))
+    .then((data)=> res.redirect('restaurants',{data:data}))
     .catch((err)=> res.send(err))
 })
 
@@ -23,12 +23,15 @@ router.get('/:id',(req,res)=>{
 })
 
 
-
+router.get('/edit/:id',(req,res)=>{
+    db.Restaurants.findByIdAndUpdate({_id:req.params.id})
+    .then((data)=>res.render('restauranteditpage',{data:data}))
+})
 
 router.put('/:id',(req,res)=>{
     console.log(req.params.id)
     db.Restaurants.findOneAndUpdate({_id:req.params.id},req.body)
-    .then((data)=>res.json(data))
+    .then((data)=>res.render('restaurants'))
      .catch(()=>console.log("error",err))
 })
 

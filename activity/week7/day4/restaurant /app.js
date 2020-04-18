@@ -2,6 +2,9 @@ const express = require('express');
 const app = express();
 const port = 3700;
 const db = require('./models')
+var methodOverride = require('method-override')
+app.use(methodOverride('_method'))
+
 app.set('view engine', 'ejs')
 const path = require('path')
 const bodyParser = require('body-parser');

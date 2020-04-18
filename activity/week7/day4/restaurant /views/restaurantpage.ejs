@@ -1,7 +1,7 @@
 <%- include('./partials/header'); -%>
 <div class="container">
     <%= console.log(data) %>
-    <div class="col-sm-3">
+    <div class="">
     <div class="card shadow p-3 mb-5 bg-white rounded ">
         <div class="card-body">
             <div class="card" style="width: 18rem">
@@ -11,8 +11,10 @@
                 <h3> <%= data.phoneNumber %></h3>
                 <p><%= data.price  %>Rs</p>
                   <p class="card-text"><%= data.desc %></p>
-                
-                </div>
+                  <a href="/restaurants/edit/<%= data._id%>" class="btn btn-outline-success my-2 my-sm-0" type="submit">Edit</a>
+                  <form action='/restaurants/<%=data._id%>?_method=DELETE' method="POST" >
+                  <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Delete</button>           
+                </form>     </div>
               </div>
         </div>
     </div>

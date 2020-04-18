@@ -1,18 +1,67 @@
 <%- include('./partials/header'); -%>
 <div class="container">
+    <form method="POST"  action="/restaurants" >
+        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">add new restaurant</button>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="storeName">ADD NEW <%= data.restaurantName %></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="form-group">
+                    <label for="recipient-name" class="col-form-label">restaurantName:</label>
+                    <input type="text" class="form-control" name="restaurantName " id="recipient-name">
+                  </div>
+                  <div class="form-group">
+                    <label for="message-text" class="col-form-label">email:</label>
+                    <input class="form-control" name="email" id="message-text"></input>
+                  </div>
+                  <div class="form-group">
+                    <label for="message-text" class="col-form-label">number:</label>
+                    <input class="form-control" name="<phoneNumber" id="message-text"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="message-text" class="col-form-label">price</label>
+                    <input class="form-control" name="price" id="message-text"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="message-text" class="col-form-label">description:</label>
+                    <input class="form-control" name=" desc " id="message-text"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="message-text" class="col-form-label">image:</label>
+                    <input class="form-control" name="image " id="message-text"></>
+                  </div>
+              </div>
+              <div class="modal-footer">
+                  <button type="submit" class="btn btn-primary">ADD RESTAURANT</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+    </form>
 <div class="row">
+
 <% for(var i=0;i<data.length;i++) { %>
-    <div class="col-sm-3">
-    <div class="card shadow p-3 mb-5 bg-white rounded ">
-        <div class="card-body">
+
+    <div class="">
+    <div class= " card shadow p-3 mb-5 bg-white rounded ">
+        <div class="col-md-3 card-body">
             <div class="card" style="width: 18rem;">
                 <img src="<%=data[i].image%>" class="card-img-top" alt="Resturants">
                 <div class="card-body">
-                <h4><%= data[i].name %></h4>
+                <h4><%= data[i].restaurantName %></h4>
                   <p class="card-text"><%= data[i].description %></p>
-                 <center>
                      <a href="/restaurants/<%= data[i]._id %>" class="btn btn-outline-success my-2 my-sm-0" type="submit">View More</a>
-                    </center> 
+                     <a href="/restaurants/<%= data[i]._id %>" class="btn btn-outline-success my-2 my-sm-0" type="submit">edit</a>
+
                 </div>
               </div>
         </div>
