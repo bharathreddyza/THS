@@ -15,7 +15,9 @@ const indexroute = require('./routes/index')
 const restaurantroute = require('./routes/restaurants')
 const storesRoute = require('./routes/stores')
 
-app.use('/',indexroute)
+app.get('/',(req,res)=>{
+    res.send("hello")
+})
 app.use('/restaurants',restaurantroute)
 app.use('/stores',storesRoute)
 
