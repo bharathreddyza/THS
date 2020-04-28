@@ -34,7 +34,9 @@ passport.use(new GoogleStrategy({
   db.USERS.findOne({ googleId: profile.id })
   .then((currentUser)=>{
     if(currentUser){
- console.log("user",currentUser)
+ console.log("user", 
+ 
+ currentUser)
     }else{
       new USERS({
         userName:profile.displayName,
