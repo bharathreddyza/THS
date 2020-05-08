@@ -1,0 +1,12 @@
+hash tables -->objects in javascript
+combination of key value pairs
+Time complexity-> for
+insert 
+delete 
+search 
+-->constant time o(1)
+space complexity o(n)
+hash tables are built on top of arrays
+[]
+hashing functions are very fancy whch will not allow to store 2 things in same index 
+but if that happens the value will be mapped using the keys and stored in the same index
