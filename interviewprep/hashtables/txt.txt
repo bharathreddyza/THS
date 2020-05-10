@@ -1,6 +1,6 @@
 hash tables -->objects in javascript
 combination of key value pairs
-Time complexity-> for
+Time complexity-> for       ce
 insert 
 delete 
 search 
